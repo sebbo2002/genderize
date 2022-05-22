@@ -8,7 +8,7 @@ export enum GenderizeGender {
     MALE = 'male'
 }
 
-export interface GenderizeSingleResponse {
+export interface GenderizeResponse {
     /**
      * Name which was used for this prediction
      */
@@ -31,7 +31,7 @@ export interface GenderizeSingleResponse {
      */
     count: number;
 }
-export interface GenderizeSingleResponseWithCountry extends GenderizeSingleResponse {
+export interface GenderizeResponseWithCountry extends GenderizeResponse {
     /**
      * ISO 3166-1 alpha-2 country code which was used for this prediction
      */
@@ -180,7 +180,7 @@ export default class Genderize {
      * }
      * ```
      */
-    async predict(name: string): Promise<GenderizeSingleResponse>;
+    async predict(name: string): Promise<GenderizeResponse>;
 
     /**
      * Predict multiple names. Works for up to 10 names at the same time.
@@ -207,7 +207,7 @@ export default class Genderize {
      * ]
      * ```
      */
-    async predict(names: string[]): Promise<GenderizeSingleResponse[]>;
+    async predict(names: string[]): Promise<GenderizeResponse[]>;
 
     /**
      * Predict a single name with a given ISO 3166-1 alpha-2 country code
@@ -230,7 +230,7 @@ export default class Genderize {
      * }
      * ```
      */
-    async predict(name: string, country: string): Promise<GenderizeSingleResponseWithCountry>;
+    async predict(name: string, country: string): Promise<GenderizeResponseWithCountry>;
 
     /**
      * Predict multiple names with a given ISO 3166-1 alpha-2
@@ -258,12 +258,12 @@ export default class Genderize {
      * ]
      * ```
      */
-    async predict(names: string[], country: string): Promise<GenderizeSingleResponseWithCountry[]>;
+    async predict(names: string[], country: string): Promise<GenderizeResponseWithCountry[]>;
 
-    async predict(names: string | string[], country?: string): Promise<GenderizeSingleResponse | GenderizeSingleResponse[] | GenderizeSingleResponseWithCountry | GenderizeSingleResponseWithCountry[]> {
+    async predict(names: string | string[], country?: string): Promise<GenderizeResponse | GenderizeResponse[] | GenderizeResponseWithCountry | GenderizeResponseWithCountry[]> {
         const searchParams = this.params(names, country);
         const {body, headers} = await got.get('https://api.genderize.io/', { searchParams, responseType: 'json' });
         this.latestHeaders = [headers, new Date()];
-        return body as GenderizeSingleResponse | GenderizeSingleResponse[];
+        return body as GenderizeResponse | GenderizeResponse[];
     }
 }
