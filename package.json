@@ -1,0 +1,55 @@
+{
+  "author": "Sebastian Pekarek <mail@sebbo.net>",
+  "bugs": {
+    "url": "https://github.com/sebbo2002/genderize/issues"
+  },
+  "dependencies": {
+    "got": "^11.8.3"
+  },
+  "description": "genderize is a simple client for genderize.io, a gender prediction API",
+  "devDependencies": {
+    "@amanda-mitchell/semantic-release-npm-multiple": "^2.15.0",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-jsonc": "^2.0.0",
+    "license-checker": "^25.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "nyc": "^15.1.0",
+    "semantic-release-license": "^1.0.3",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.4.0",
+    "typedoc": "^0.22.10",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/sebbo2002/genderize#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@sebbo2002/genderize",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebbo2002/genderize.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build-all": "./.github/workflows/build.sh",
+    "coverage": "nyc mocha",
+    "license-check": "license-checker --production --summary",
+    "lint": "eslint . --ext .ts,.json",
+    "test": "mocha"
+  },
+  "version": "0.0.0-dev.0"
+}
