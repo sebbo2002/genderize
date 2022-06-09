@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="37" lines-covered="36" line-rate="0.973" branches-valid="27" branches-covered="26" branch-rate="0.963" timestamp="1654792125072" complexity="0" version="0.1">
+  <sources>
+    <source>/home/runner/work/genderize/genderize</source>
+  </sources>
+  <packages>
+    <class name="index.ts" filename="src/lib/index.ts" line-rate="0.973" branch-rate="0.963">
+      <methods>
+        <method name="(anonymous_8)" hits="1" signature="()V">
+          <lines>
+            <line number="6" hits="1"/>
+          </lines>
+        </method>
+        <method name="(anonymous_9)" hits="8" signature="()V">
+          <lines>
+            <line number="86" hits="8"/>
+          </lines>
+        </method>
+        <method name="(anonymous_10)" hits="28" signature="()V">
+          <lines>
+            <line number="93" hits="28"/>
+          </lines>
+        </method>
+        <method name="(anonymous_11)" hits="9" signature="()V">
+          <lines>
+            <line number="111" hits="9"/>
+          </lines>
+        </method>
+        <method name="(anonymous_12)" hits="7" signature="()V">
+          <lines>
+            <line number="137" hits="7"/>
+          </lines>
+        </method>
+        <method name="(anonymous_13)" hits="6" signature="()V">
+          <lines>
+            <line number="147" hits="6"/>
+          </lines>
+        </method>
+        <method name="(anonymous_14)" hits="2" signature="()V">
+          <lines>
+            <line number="263" hits="2"/>
+          </lines>
+        </method>
+      </methods>
+      <lines>
+        <line number="1" hits="1" branch="false"/>
+        <line number="6" hits="1" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="7" hits="1" branch="false"/>
+        <line number="8" hits="1" branch="false"/>
+        <line number="67" hits="1" branch="false"/>
+        <line number="69" hits="8" branch="false"/>
+        <line number="87" hits="8" branch="false"/>
+        <line number="94" hits="28" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="95" hits="1" branch="false"/>
+        <line number="98" hits="27" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="99" hits="1" branch="false"/>
+        <line number="102" hits="26" branch="false"/>
+        <line number="112" hits="9" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="113" hits="1" branch="false"/>
+        <line number="116" hits="8" branch="false"/>
+        <line number="117" hits="8" branch="false"/>
+        <line number="118" hits="8" branch="false"/>
+        <line number="120" hits="8" branch="true" condition-coverage="80% (4/5)"/>
+        <line number="121" hits="8" branch="false"/>
+        <line number="128" hits="0" branch="false"/>
+        <line number="138" hits="7" branch="false"/>
+        <line number="139" hits="7" branch="true" condition-coverage="100% (4/4)"/>
+        <line number="140" hits="1" branch="false"/>
+        <line number="142" hits="6" branch="true" condition-coverage="100% (4/4)"/>
+        <line number="143" hits="1" branch="false"/>
+        <line number="146" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="147" hits="6" branch="false"/>
+        <line number="149" hits="2" branch="false"/>
+        <line number="152" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="153" hits="2" branch="false"/>
+        <line number="156" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="157" hits="1" branch="false"/>
+        <line number="160" hits="5" branch="false"/>
+        <line number="264" hits="2" branch="false"/>
+        <line number="265" hits="2" branch="false"/>
+        <line number="266" hits="2" branch="false"/>
+        <line number="267" hits="2" branch="false"/>
+      </lines>
+    </class>
+  </packages>
+</coverage>
