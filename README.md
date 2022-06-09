@@ -1,47 +1,56 @@
-# template
+# genderize
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/sebbo2002/genderize/blob/develop/LICENSE)
+[![Module Size](https://img.shields.io/bundlephobia/min/genderize?style=flat-square)](https://bundlephobia.com/package/genderize)
+[![CI Status](https://img.shields.io/github/workflow/status/sebbo2002/genderize/Test%20%26%20Release?style=flat-square)](https://github.com/sebbo2002/genderize/actions)
 
-Here would be a very short description of the project. So in this example it would be a short information that this is
-a template that I use to start new projects and services.
+<br />
 
-
-## 🚨 Template Usage Checklist
-- [ ] Update project name in `package.json`
-- [ ] Create `main` and `develop` branches
-- [ ] Set `develop` as default branch
-- [ ] Create Docker Repository
-    - [ ] Add Repository Description
-    - [ ] Add secret: `DOCKERHUB_TOKEN`
-- [ ] Create npm Repository with `npm publish --access public`
-    - [ ] Add secret: `NPM_TOKEN`
-- [ ] Go through repo settings
+`genderize` is a simple client for [genderize.io](https://genderize.io/), a gender prediction API using a person's 
+name. The library supports both normal and batch usage, allows free and paid usage via an optional API key, and makes it 
+very easy to access rate limiting information. It's written in TypeScript.
 
 
 ## 📦 Installation
 
-	git clone https://github.com/sebbo2002/template.git
-    cd ./template
-
-    npm install
+	npm install @sebbo2002/genderize
 
 
 ## ⚡️ Quick Start
 
-This is where it would normally say how to use the project.
-This could be a code example for a library or instructions on how to use a CLI tool.
+```typescript
+import Genderize from '@sebbo2002/genderize';
+
+const genderize = new Genderize('API-KEY'); // or just `new Genderize()` for free usage
+
+// { name: 'Mia', gender: 'female', probability: 0.96, count: 19266 }
+await genderize.predict('Mia');
+
+// {name: 'Steven', gender: 'male, probability: 0.98, count: 5207, country_id: 'US' }
+await genderize.predict('Alex', 'US');
+
+// [
+//   { name: 'Noah', gender: 'male', probability: 0.88, count: 3939 },
+//   { name: 'Evelyn', gender: 'female', probability: 0.98, count: 12188 }
+// ]
+await genderize.predict(['Noah', 'Evelyn']);
+
+// { limit: 1000, remaining: 978, reset: 2022-05-23T00:00:02.203Z }
+genderize.limit
+```
 
 
 ## 📑 API-Reference
 
-Is there an API that needs to be documented? Then here would be a nice place for it. If there is external documentation,
-you can link it here ([example](https://github.com/sebbo2002/ical-generator/#-api-reference)).
+Every hot detail about the API can be found in [the documentation](https://sebbo2002.github.io/genderize/develop/reference/).
 
 
-## 🙋 FAQ
+## 🚦 Tests
 
-### What's `1` + `2`
-It's `3` 🎉
+```
+npm test
+npm run coverage
+```
 
 
 ## 🙆🏼‍♂️ Copyright and license
