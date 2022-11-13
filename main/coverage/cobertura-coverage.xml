@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="37" lines-covered="36" line-rate="0.973" branches-valid="27" branches-covered="26" branch-rate="0.963" timestamp="1654792125072" complexity="0" version="0.1">
+<coverage lines-valid="39" lines-covered="38" line-rate="0.9743999999999999" branches-valid="29" branches-covered="28" branch-rate="0.9655" timestamp="1668360279006" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/genderize/genderize</source>
   </sources>
   <packages>
-    <class name="index.ts" filename="src/lib/index.ts" line-rate="0.973" branch-rate="0.963">
+    <class name="index.ts" filename="src/lib/index.ts" line-rate="0.9743999999999999" branch-rate="0.9655">
       <methods>
         <method name="(anonymous_8)" hits="1" signature="()V">
           <lines>
@@ -39,7 +39,7 @@
         </method>
         <method name="(anonymous_14)" hits="2" signature="()V">
           <lines>
-            <line number="263" hits="2"/>
+            <line number="267" hits="2"/>
           </lines>
         </method>
       </methods>
@@ -76,11 +76,13 @@
         <line number="153" hits="2" branch="false"/>
         <line number="156" hits="5" branch="true" condition-coverage="100% (2/2)"/>
         <line number="157" hits="1" branch="false"/>
-        <line number="160" hits="5" branch="false"/>
-        <line number="264" hits="2" branch="false"/>
-        <line number="265" hits="2" branch="false"/>
-        <line number="266" hits="2" branch="false"/>
-        <line number="267" hits="2" branch="false"/>
+        <line number="159" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+        <line number="160" hits="3" branch="false"/>
+        <line number="164" hits="2" branch="false"/>
+        <line number="268" hits="2" branch="false"/>
+        <line number="269" hits="2" branch="false"/>
+        <line number="270" hits="2" branch="false"/>
+        <line number="271" hits="2" branch="false"/>
       </lines>
     </class>
   </packages>
