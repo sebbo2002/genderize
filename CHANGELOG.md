@@ -1,3 +1,5 @@
+## [1.0.1-develop.5](https://github.com/sebbo2002/genderize/compare/v1.0.1-develop.4...v1.0.1-develop.5) (2022-11-13)
+
 ## [1.0.1-develop.4](https://github.com/sebbo2002/genderize/compare/v1.0.1-develop.3...v1.0.1-develop.4) (2022-11-13)
 
 
