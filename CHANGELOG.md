@@ -1,3 +1,10 @@
+## [1.0.1-develop.4](https://github.com/sebbo2002/genderize/compare/v1.0.1-develop.3...v1.0.1-develop.4) (2022-11-13)
+
+
+### Bug Fixes
+
+* Update lib to work with current array handling ([1bf17e7](https://github.com/sebbo2002/genderize/commit/1bf17e7ffc3311b16a0ee146ff7e60e98b906dc7))
+
 ## [1.0.1-develop.3](https://github.com/sebbo2002/genderize/compare/v1.0.1-develop.2...v1.0.1-develop.3) (2022-08-22)
 
 ## [1.0.1-develop.2](https://github.com/sebbo2002/genderize/compare/v1.0.1-develop.1...v1.0.1-develop.2) (2022-07-16)
