@@ -115,7 +115,7 @@ export default class Genderize {
 
         const limit = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-limit']);
         const remaining = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-remaining']);
-        const reset = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-reset']);
+        const reset = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-reset']);
 
         if(limit !== undefined && remaining !== undefined && reset !== undefined) {
             return {
@@ -134,7 +134,7 @@ export default class Genderize {
      *
      * @internal
      */
-    params(names: string | string[], country?: string): URLSearchParams {
+    params(names: string | string[], country?: string): string {
         const searchParams = new URLSearchParams();
         if(Array.isArray(names) && names.length > 10) {
             throw new Error(`Too many names given: ${names.length} names provided, but 10 is the maximum allowed`);
@@ -156,8 +156,12 @@ export default class Genderize {
         if(this.apiKey) {
             searchParams.append('apikey', this.apiKey);
         }
+        if(Array.isArray(names)) {
+            return searchParams.toString()
+                .replace(/name=/g, 'name[]=');
+        }
 
-        return searchParams;
+        return searchParams.toString();
     }
 
     /**
