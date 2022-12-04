@@ -8,7 +8,7 @@ describe('Genderize', function () {
         it('should work with arrays', function () {
             assert.equal(
                 new Genderize().params(['Max', 'Lisa'], 'DE').toString(),
-                'name=Max&name=Lisa&country_id=DE'
+                'name[]=Max&name[]=Lisa&country_id=DE'
             );
         });
         it('should work with single string', function () {
@@ -30,7 +30,7 @@ describe('Genderize', function () {
         it('should add the apiKey if given', function () {
             assert.equal(
                 new Genderize('hello-world').params(['Max', 'Lisa'], 'DE').toString(),
-                'name=Max&name=Lisa&country_id=DE&apikey=hello-world'
+                'name[]=Max&name[]=Lisa&country_id=DE&apikey=hello-world'
             );
         });
     });
@@ -69,10 +69,10 @@ describe('Genderize', function () {
         });
         it('should work with multiple names', async function() {
             const g = new Genderize();
-            const result = await g.predict(['Max', 'Lisa']);
+            const result = await g.predict(['Moritz', 'Lisa']);
             assert.equal(result.length, 2);
 
-            assert.equal(result[0].name, 'Max');
+            assert.equal(result[0].name, 'Moritz');
             assert.equal(result[0].gender, 'male');
             assert.equal(result[0].gender, GenderizeGender.MALE);
             assert.ok(result[0].probability > 0.9, 'probability > 0.9');
