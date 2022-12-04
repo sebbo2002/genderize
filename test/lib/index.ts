@@ -1,6 +1,6 @@
 'use strict';
 
-import Genderize, { GenderizeGender } from '../../src/lib.js';
+import Genderize, { GenderizeGender } from '../../src/lib/index.js';
 import assert from 'assert';
 
 describe('Genderize', function () {
