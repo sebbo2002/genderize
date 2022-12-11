@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/sebbo2002/genderize/compare/v1.0.1...v2.0.0) (2022-12-11)
+
+
+### Build System
+
+* Native ESM support ([7b86a4f](https://github.com/sebbo2002/genderize/commit/7b86a4f1187c387a3a5792e1fb72d822b04e3631))
+
+
+### BREAKING CHANGES
+
+* Only Support for node.js ^12.20.0 || >=14.13.1
+
 # [2.0.0-develop.2](https://github.com/sebbo2002/genderize/compare/v2.0.0-develop.1...v2.0.0-develop.2) (2022-12-07)
 
 # [2.0.0-develop.1](https://github.com/sebbo2002/genderize/compare/v1.0.1...v2.0.0-develop.1) (2022-12-04)
