@@ -1,16 +1,18 @@
 name: Test & Release
 on:
   push:
-    branches:
-      - develop
-      - main
+    branches-ignore:
+      - 'gh-pages'
+      - 'depfu/**'
+      - 'dependabot/**'
+      - 'template-updater/**'
   pull_request: null
 
 jobs:
   tests:
     name: Unit Tests
     runs-on: ubuntu-latest
-    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
+    if: github.repository != 'sebbo2002/js-template' && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
     strategy:
       matrix:
         node: [14.x, 16.x, 18.x]
@@ -30,7 +32,7 @@ jobs:
   coverage:
     name: Code Coverage / Lint
     runs-on: ubuntu-latest
-    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
+    if: github.repository != 'sebbo2002/js-template' && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
     steps:
       - name: ☁️ Checkout Project
         uses: actions/checkout@v3
@@ -93,7 +95,7 @@ jobs:
           PUBLIC_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: 🔃 Merge main back into develop
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: everlytic/branch-merge@1.1.4
+        uses: everlytic/branch-merge@1.1.5
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           source_ref: 'main'
