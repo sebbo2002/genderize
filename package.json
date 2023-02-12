@@ -4,7 +4,7 @@
     "url": "https://github.com/sebbo2002/genderize/issues"
   },
   "dependencies": {
-    "got": "^11.8.6"
+    "got": "^12.5.3"
   },
   "description": "genderize is a simple client for genderize.io, a gender prediction API",
   "devDependencies": {
