@@ -1,3 +1,15 @@
+# [3.0.0-develop.3](https://github.com/sebbo2002/genderize/compare/v3.0.0-develop.2...v3.0.0-develop.3) (2023-03-30)
+
+
+### chore
+
+* Remove cjs ([c8da1df](https://github.com/sebbo2002/genderize/commit/c8da1df34823aeec3353914af128b9b60dda90c8))
+
+
+### BREAKING CHANGES
+
+* Removed cjs, so this module is now pure ESM. See also https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
 # [3.0.0-develop.2](https://github.com/sebbo2002/genderize/compare/v3.0.0-develop.1...v3.0.0-develop.2) (2023-03-30)
 
 # [3.0.0-develop.1](https://github.com/sebbo2002/genderize/compare/v2.0.1...v3.0.0-develop.1) (2023-02-12)
