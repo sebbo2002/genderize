@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/sebbo2002/genderize/compare/v2.0.1...v3.0.0) (2023-03-30)
+
+
+### Build System
+
+* Deprecate node.js 12 ([426588b](https://github.com/sebbo2002/genderize/commit/426588b4bb7bde2924bbc92006ca839e960872e1))
+
+
+### chore
+
+* Remove cjs ([c8da1df](https://github.com/sebbo2002/genderize/commit/c8da1df34823aeec3353914af128b9b60dda90c8))
+
+
+### BREAKING CHANGES
+
+* Removed cjs, so this module is now pure ESM. See also https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+* From now on, only node.js ^14.8.0 || >=16.0.0 are supported
+
 # [3.0.0-develop.3](https://github.com/sebbo2002/genderize/compare/v3.0.0-develop.2...v3.0.0-develop.3) (2023-03-30)
 
 
