@@ -34,16 +34,12 @@
   "engines": {
     "node": "^14.8.0 || >=16.0.0"
   },
-  "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
-  },
   "files": [
     "/dist"
   ],
   "homepage": "https://github.com/sebbo2002/genderize#readme",
   "license": "MIT",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "name": "@sebbo2002/genderize",
   "repository": {
