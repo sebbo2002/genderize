@@ -2,7 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/sebbo2002/genderize/blob/develop/LICENSE)
 [![Module Size](https://img.shields.io/bundlephobia/min/genderize?style=flat-square)](https://bundlephobia.com/package/genderize)
-[![CI Status](https://img.shields.io/github/workflow/status/sebbo2002/genderize/Test%20%26%20Release?style=flat-square)](https://github.com/sebbo2002/genderize/actions)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/sebbo2002/genderize/test-release.yml?style=flat-square)](https://github.com/sebbo2002/genderize/actions)
 
 <br />
 
