@@ -1,5 +1,3 @@
-import got from 'got';
-
 /**
  * Enum that can be used to compare and check the results
  */
@@ -66,7 +64,7 @@ export interface GenderizeLimit {
 
 export default class Genderize {
     private readonly apiKey;
-    private latestHeaders: [Record<string, string[] | string | undefined>, Date] | null = null;
+    private latestHeaders: [Headers, Date] | null = null;
 
     /**
      * Usually you get an `Genderize` instance like this:
@@ -109,13 +107,9 @@ export default class Genderize {
      * of type [[`GenderizeLimit`]].
      */
     get limit(): GenderizeLimit | null {
-        if(!this.latestHeaders) {
-            return null;
-        }
-
-        const limit = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-limit']);
-        const remaining = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-remaining']);
-        const reset = Genderize.getIntHeader(this.latestHeaders[0]['x-rate-limit-reset']);
+        const limit = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-limit'));
+        const remaining = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-remaining'));
+        const reset = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-reset'));
 
         if(limit !== undefined && remaining !== undefined && reset !== undefined) {
             return {
@@ -265,9 +259,18 @@ export default class Genderize {
     async predict(names: string[], country: string): Promise<GenderizeResponseWithCountry[]>;
 
     async predict(names: string | string[], country?: string): Promise<GenderizeResponse | GenderizeResponse[] | GenderizeResponseWithCountry | GenderizeResponseWithCountry[]> {
-        const searchParams = this.params(names, country);
-        const {body, headers} = await got.get('https://api.genderize.io/', { searchParams, responseType: 'json' });
-        this.latestHeaders = [headers, new Date()];
-        return body as GenderizeResponse | GenderizeResponse[];
+        const queryString = new URLSearchParams(this.params(names, country));
+        const response = await fetch('https://api.genderize.io/?' + queryString, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if(!response.ok) {
+            throw new Error(`Unable to query genderize.io: ${await response.text()}`);
+        }
+
+        const body = await response.json() as GenderizeResponse | GenderizeResponse[];
+        this.latestHeaders = [response.headers, new Date()];
+        return body;
     }
 }
