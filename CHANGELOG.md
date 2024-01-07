@@ -1,3 +1,15 @@
+# [4.1.0](https://github.com/sebbo2002/genderize/compare/v4.0.0...v4.1.0) (2024-01-07)
+
+
+### Features
+
+* Remove got dependency ([1bce84e](https://github.com/sebbo2002/genderize/commit/1bce84e63d51dbb325154650483cc6e34d0c41aa))
+
+
+### Reverts
+
+* Revert "ci: Downgrade is-semantic-release till it's fixed" ([91c2ab5](https://github.com/sebbo2002/genderize/commit/91c2ab59d0559a060c11d07973382c465dd3345d))
+
 ## [4.0.1-develop.1](https://github.com/sebbo2002/genderize/compare/v4.0.0...v4.0.1-develop.1) (2023-08-23)
 
 # [4.0.0](https://github.com/sebbo2002/genderize/compare/v3.0.0...v4.0.0) (2023-06-14)
