@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="276" lines-covered="274" line-rate="0.9926999999999999" branches-valid="46" branches-covered="45" branch-rate="0.9782" timestamp="1713198286935" complexity="0" version="0.1">
+<coverage lines-valid="276" lines-covered="274" line-rate="0.9926999999999999" branches-valid="46" branches-covered="45" branch-rate="0.9782" timestamp="1720376163597" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/genderize/genderize</source>
   </sources>
