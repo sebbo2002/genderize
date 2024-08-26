@@ -88,12 +88,12 @@ export default class Genderize {
     /**
      * @internal
      */
-    static getIntHeader(value: string | string[] | undefined): number | undefined {
+    static getIntHeader(value: string | string[] | null | undefined): number | undefined {
         if(Array.isArray(value)) {
             return this.getIntHeader(value[0]);
         }
 
-        if(value === undefined) {
+        if(value === undefined || value === null) {
             return undefined;
         }
 
@@ -107,16 +107,19 @@ export default class Genderize {
      * of type [[`GenderizeLimit`]].
      */
     get limit(): GenderizeLimit | null {
-        const limit = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-limit'));
-        const remaining = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-remaining'));
-        const reset = Genderize.getIntHeader(this.latestHeaders?.[0]?.get('x-rate-limit-reset'));
 
-        if(limit !== undefined && remaining !== undefined && reset !== undefined) {
-            return {
-                limit,
-                remaining,
-                reset: new Date(this.latestHeaders[1].getTime() + (reset * 1000))
-            };
+        if (this.latestHeaders) {
+            const limit = Genderize.getIntHeader(this.latestHeaders[0].get('x-rate-limit-limit'));
+            const remaining = Genderize.getIntHeader(this.latestHeaders[0].get('x-rate-limit-remaining'));
+            const reset = Genderize.getIntHeader(this.latestHeaders[0].get('x-rate-limit-reset'));
+
+            if (limit !== undefined && remaining !== undefined && reset !== undefined) {
+                return {
+                    limit,
+                    remaining,
+                    reset: new Date(this.latestHeaders[1].getTime() + (reset * 1000))
+                };
+            }
         }
 
         return null;

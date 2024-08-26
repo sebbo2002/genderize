@@ -5,31 +5,36 @@
   },
   "description": "genderize is a simple client for genderize.io, a gender prediction API",
   "devDependencies": {
-    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.4",
-    "@semantic-release/changelog": "^6.0.2",
+    "@eslint/js": "^9.9.0",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.12",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.2",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "^18.13.0",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
-    "c8": "^7.11.3",
-    "eslint": "^8.33.0",
-    "eslint-plugin-jsonc": "^2.6.0",
+    "@semantic-release/npm": "^12.0.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^22.5.0",
+    "c8": "^10.1.2",
+    "eslint": "^9.9.0",
+    "eslint-plugin-jsonc": "^2.16.0",
     "esm": "^3.2.25",
     "license-checker": "^25.0.1",
-    "mocha": "^10.2.0",
+    "mocha": "^10.7.3",
     "mochawesome": "^7.1.3",
     "semantic-release-license": "^1.0.3",
     "source-map-support": "^0.5.21",
-    "ts-node": "^10.8.1",
-    "tsup": "^6.7.0",
-    "typedoc": "^0.23.24",
-    "typescript": "^4.9.5"
+    "tsup": "^8.1.0",
+    "tsx": "^4.17.0",
+    "typedoc": "^0.26.6",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.2.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18 || 20 || >=22.0.0"
+  },
+  "exports": {
+    "import": "./dist/lib/index.js",
+    "require": "./dist/lib/index.cjs"
   },
   "files": [
     "/dist"
@@ -48,7 +53,7 @@
     "build-all": "./.github/workflows/build.sh",
     "coverage": "c8 mocha",
     "license-check": "license-checker --production --summary",
-    "lint": "eslint . --ext .ts,.json",
+    "lint": "eslint .",
     "test": "mocha"
   },
   "type": "module",
