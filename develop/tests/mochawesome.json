@@ -5,9 +5,9 @@
     "passes": 11,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-29T08:51:26.209Z",
-    "end": "2024-10-29T08:51:26.453Z",
-    "duration": 244,
+    "start": "2024-11-05T10:07:38.676Z",
+    "end": "2024-11-05T10:07:39.040Z",
+    "duration": 364,
     "testsRegistered": 11,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "75bacd0c-c433-49e0-bd4d-1faa4f26fe93",
+      "uuid": "bd0d0544-53e7-49f6-814c-d82985ec0109",
       "title": "",
       "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
       "file": "/test/lib/index.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ba47f863-7602-43f5-ad0d-588ede3abe62",
+          "uuid": "b1647052-843d-462d-a5d1-9104be9e7da3",
           "title": "Genderize",
           "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
           "file": "/test/lib/index.ts",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
+              "uuid": "0b600f2b-5053-485e-818c-e0c47046eed9",
               "title": "params()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -56,32 +56,14 @@
                   "context": null,
                   "code": "assert.equal(new Genderize().params([\"Max\",\"Lisa\"],\"DE\").toString(),\"name[]=Max&name[]=Lisa&country_id=DE\")",
                   "err": {},
-                  "uuid": "029e5d2c-2313-4bc3-801d-111e93fca453",
-                  "parentUUID": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
+                  "uuid": "9907a944-a32e-487b-ad01-cb9ab8be9ff4",
+                  "parentUUID": "0b600f2b-5053-485e-818c-e0c47046eed9",
                   "isHook": false,
                   "skipped": false
                 },
                 {
                   "title": "should work with single string",
                   "fullTitle": "Genderize params() should work with single string",
-                  "timedOut": false,
-                  "duration": 1,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "assert.equal(new Genderize().params(\"Max\").toString(),\"name=Max\")",
-                  "err": {},
-                  "uuid": "ff15f058-9e9e-4b2f-8aa3-c388b7227619",
-                  "parentUUID": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
-                  "isHook": false,
-                  "skipped": false
-                },
-                {
-                  "title": "should throw an exception if no name was given",
-                  "fullTitle": "Genderize params() should throw an exception if no name was given",
                   "timedOut": false,
                   "duration": 0,
                   "state": "passed",
@@ -90,10 +72,28 @@
                   "fail": false,
                   "pending": false,
                   "context": null,
+                  "code": "assert.equal(new Genderize().params(\"Max\").toString(),\"name=Max\")",
+                  "err": {},
+                  "uuid": "5a39c90b-0495-4b18-8a34-de6e98ad52c2",
+                  "parentUUID": "0b600f2b-5053-485e-818c-e0c47046eed9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should throw an exception if no name was given",
+                  "fullTitle": "Genderize params() should throw an exception if no name was given",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
                   "code": "assert.throws(()=>{new Genderize().params([])},/No name given, but at least one is required/)",
                   "err": {},
-                  "uuid": "cd774ae5-e22c-4749-95ea-326ada1620a9",
-                  "parentUUID": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
+                  "uuid": "f2cafb85-0ed3-4b33-8d59-cf1effbfc42c",
+                  "parentUUID": "0b600f2b-5053-485e-818c-e0c47046eed9",
                   "isHook": false,
                   "skipped": false
                 },
@@ -110,8 +110,8 @@
                   "context": null,
                   "code": "assert.throws(()=>{new Genderize().params([\"James\",\"Robert\",\"John\",\"Michael\",\"David\",\"William\",\"Richard\",\"Thomas\",\"Christopher\",\"Daniel\",\"Paul\"])},/Too many names given: 11 names provided, but 10 is the maximum allowed/)",
                   "err": {},
-                  "uuid": "cd29d0d6-f26c-4d13-b122-b83de2a39e81",
-                  "parentUUID": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
+                  "uuid": "35d0deb9-8911-4277-904d-54bf2c1cd427",
+                  "parentUUID": "0b600f2b-5053-485e-818c-e0c47046eed9",
                   "isHook": false,
                   "skipped": false
                 },
@@ -128,19 +128,19 @@
                   "context": null,
                   "code": "assert.equal(new Genderize(\"hello-world\").params([\"Max\",\"Lisa\"],\"DE\").toString(),\"name[]=Max&name[]=Lisa&country_id=DE&apikey=hello-world\")",
                   "err": {},
-                  "uuid": "07eab58b-34e9-4617-b07d-3d3739b8fe22",
-                  "parentUUID": "ad7aa2f5-3bdf-4f08-8550-feeab5f02fec",
+                  "uuid": "528d7b01-c4f5-4ec8-b121-8112da6b0ee5",
+                  "parentUUID": "0b600f2b-5053-485e-818c-e0c47046eed9",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "029e5d2c-2313-4bc3-801d-111e93fca453",
-                "ff15f058-9e9e-4b2f-8aa3-c388b7227619",
-                "cd774ae5-e22c-4749-95ea-326ada1620a9",
-                "cd29d0d6-f26c-4d13-b122-b83de2a39e81",
-                "07eab58b-34e9-4617-b07d-3d3739b8fe22"
+                "9907a944-a32e-487b-ad01-cb9ab8be9ff4",
+                "5a39c90b-0495-4b18-8a34-de6e98ad52c2",
+                "f2cafb85-0ed3-4b33-8d59-cf1effbfc42c",
+                "35d0deb9-8911-4277-904d-54bf2c1cd427",
+                "528d7b01-c4f5-4ec8-b121-8112da6b0ee5"
               ],
               "failures": [],
               "pending": [],
@@ -151,7 +151,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "0b5ca9fd-a7b9-4613-b8e6-acf04296f5fb",
+              "uuid": "f907d5c3-1aae-4bb3-aaec-652223e48bf8",
               "title": "limit()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -171,15 +171,15 @@
                   "context": null,
                   "code": "assert.strictEqual(new Genderize().limit,null)",
                   "err": {},
-                  "uuid": "da25f6e6-ed14-4472-908d-3eb82faa325f",
-                  "parentUUID": "0b5ca9fd-a7b9-4613-b8e6-acf04296f5fb",
+                  "uuid": "d7279c45-55f6-45a5-b15f-75ab257c1fff",
+                  "parentUUID": "f907d5c3-1aae-4bb3-aaec-652223e48bf8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "da25f6e6-ed14-4472-908d-3eb82faa325f"
+                "d7279c45-55f6-45a5-b15f-75ab257c1fff"
               ],
               "failures": [],
               "pending": [],
@@ -190,7 +190,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "9c1d70c6-e0e8-4ebd-9053-3ae41fd6bb5b",
+              "uuid": "79a630d4-5bfa-49ff-94a3-afa3cf122015",
               "title": "getIntHeader()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -210,8 +210,8 @@
                   "context": null,
                   "code": "assert.strictEqual(Genderize.getIntHeader(\"123\"),123)",
                   "err": {},
-                  "uuid": "c6d27cd3-82ed-4dd0-b65d-8c12fea8e986",
-                  "parentUUID": "9c1d70c6-e0e8-4ebd-9053-3ae41fd6bb5b",
+                  "uuid": "095171ee-e148-4e57-bc54-03f36541e9d4",
+                  "parentUUID": "79a630d4-5bfa-49ff-94a3-afa3cf122015",
                   "isHook": false,
                   "skipped": false
                 },
@@ -228,8 +228,8 @@
                   "context": null,
                   "code": "assert.strictEqual(Genderize.getIntHeader([\"123\",\"456\"]),123)",
                   "err": {},
-                  "uuid": "f834bedc-5045-4f19-8940-e8c220f9aa2a",
-                  "parentUUID": "9c1d70c6-e0e8-4ebd-9053-3ae41fd6bb5b",
+                  "uuid": "2f26458c-0021-4bf8-ae6d-89a521b4e7c4",
+                  "parentUUID": "79a630d4-5bfa-49ff-94a3-afa3cf122015",
                   "isHook": false,
                   "skipped": false
                 },
@@ -246,17 +246,17 @@
                   "context": null,
                   "code": "assert.strictEqual(Genderize.getIntHeader(void 0),void 0)",
                   "err": {},
-                  "uuid": "85d50cb5-e191-47a7-9ba1-b80271818e95",
-                  "parentUUID": "9c1d70c6-e0e8-4ebd-9053-3ae41fd6bb5b",
+                  "uuid": "138f3d78-d0bd-4f92-9e8c-45bb160955f1",
+                  "parentUUID": "79a630d4-5bfa-49ff-94a3-afa3cf122015",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c6d27cd3-82ed-4dd0-b65d-8c12fea8e986",
-                "f834bedc-5045-4f19-8940-e8c220f9aa2a",
-                "85d50cb5-e191-47a7-9ba1-b80271818e95"
+                "095171ee-e148-4e57-bc54-03f36541e9d4",
+                "2f26458c-0021-4bf8-ae6d-89a521b4e7c4",
+                "138f3d78-d0bd-4f92-9e8c-45bb160955f1"
               ],
               "failures": [],
               "pending": [],
@@ -267,7 +267,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "91562352-bcc0-4499-8cd8-b4e3a7d81a78",
+              "uuid": "fb31b2d3-2284-49a2-8a65-088b9affe9d8",
               "title": "detect()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -278,7 +278,7 @@
                   "title": "should work with single names",
                   "fullTitle": "Genderize detect() should work with single names",
                   "timedOut": false,
-                  "duration": 199,
+                  "duration": 312,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -287,8 +287,8 @@
                   "context": null,
                   "code": "const g=new Genderize;const result=await g.predict(\"Max\");assert.equal(result.name,\"Max\");assert.equal(result.gender,\"male\");assert.equal(result.gender,GenderizeGender.MALE);assert.ok(result.probability>.9,\"probability > 0.9\");assert.ok(result.count>1e4,\"count > 10000\");assert.ok(g.limit,\"limit is set\");assert.ok(g.limit.limit>0,\"limit > 0\");assert.ok(g.limit.remaining>0,\"remaining > 0\");assert.ok(g.limit.reset instanceof Date,\"reset is a Date\")",
                   "err": {},
-                  "uuid": "ef1afd91-a25e-4f1a-a3bf-d30044ce64e0",
-                  "parentUUID": "91562352-bcc0-4499-8cd8-b4e3a7d81a78",
+                  "uuid": "6260805e-3f55-4b95-b785-4065d71023b4",
+                  "parentUUID": "fb31b2d3-2284-49a2-8a65-088b9affe9d8",
                   "isHook": false,
                   "skipped": false
                 },
@@ -296,30 +296,30 @@
                   "title": "should work with multiple names",
                   "fullTitle": "Genderize detect() should work with multiple names",
                   "timedOut": false,
-                  "duration": 37,
+                  "duration": 43,
                   "state": "passed",
-                  "speed": "fast",
+                  "speed": "medium",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "const g=new Genderize;const result=await g.predict([\"Moritz\",\"Lisa\"]);assert.equal(result.length,2);assert.equal(result[0].name,\"Moritz\");assert.equal(result[0].gender,\"male\");assert.equal(result[0].gender,GenderizeGender.MALE);assert.ok(result[0].probability>.9,\"probability > 0.9\");assert.ok(result[0].count>1e4,\"count > 10000\");assert.equal(result[1].name,\"Lisa\");assert.equal(result[1].gender,\"female\");assert.equal(result[1].gender,GenderizeGender.FEMALE);assert.ok(result[1].probability>.9,\"probability > 0.9\");assert.ok(result[1].count>1e4,\"count > 10000\");assert.ok(g.limit,\"limit is set\");assert.ok(g.limit.limit>0,\"limit > 0\");assert.ok(g.limit.remaining>0,\"remaining > 0\");assert.ok(g.limit.reset instanceof Date,\"reset is a Date\")",
                   "err": {},
-                  "uuid": "37cb6732-b6bd-4949-8c8f-54d06f5ddb3e",
-                  "parentUUID": "91562352-bcc0-4499-8cd8-b4e3a7d81a78",
+                  "uuid": "903268f3-9753-4fa1-adb3-dcec3b28de31",
+                  "parentUUID": "fb31b2d3-2284-49a2-8a65-088b9affe9d8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ef1afd91-a25e-4f1a-a3bf-d30044ce64e0",
-                "37cb6732-b6bd-4949-8c8f-54d06f5ddb3e"
+                "6260805e-3f55-4b95-b785-4065d71023b4",
+                "903268f3-9753-4fa1-adb3-dcec3b28de31"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 236,
+              "duration": 355,
               "root": false,
               "rootEmpty": false,
               "_timeout": 10000
