@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/sebbo2002/genderize/compare/v5.0.0...v5.0.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* **deps:** downgrade eslint to v9.13.0 to resolve typescript-eslint issue ([348b76e](https://github.com/sebbo2002/genderize/commit/348b76ea80cd892e96627e4de66c29d42e8a0aa4)), closes [#10353](https://github.com/sebbo2002/genderize/issues/10353) [typescript-eslint/typescript-eslint#10353](https://github.com/typescript-eslint/typescript-eslint/issues/10353)
+
 # [5.0.0](https://github.com/sebbo2002/genderize/compare/v4.1.0...v5.0.0) (2024-08-26)
 
 
