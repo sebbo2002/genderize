@@ -56,7 +56,7 @@
         "build-all": "./.github/workflows/build.sh",
         "coverage": "c8 mocha",
         "license-check": "license-checker --production --summary",
-        "lint": "eslint .",
+        "lint": "npx eslint . --fix && npx prettier . --write",
         "test": "mocha"
     },
     "type": "module",
