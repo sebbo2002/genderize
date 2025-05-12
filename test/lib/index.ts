@@ -1,36 +1,48 @@
 'use strict';
 
-import Genderize, { GenderizeGender } from '../../src/lib/index.js';
 import assert from 'assert';
+
+import Genderize, { GenderizeGender } from '../../src/lib/index.js';
 
 describe('Genderize', function () {
     describe('params()', function () {
         it('should work with arrays', function () {
             assert.equal(
                 new Genderize().params(['Max', 'Lisa'], 'DE').toString(),
-                'name[]=Max&name[]=Lisa&country_id=DE'
+                'name[]=Max&name[]=Lisa&country_id=DE',
             );
         });
         it('should work with single string', function () {
             assert.equal(new Genderize().params('Max').toString(), 'name=Max');
         });
-        it('should throw an exception if no name was given', function() {
+        it('should throw an exception if no name was given', function () {
             assert.throws(() => {
                 new Genderize().params([]);
             }, /No name given, but at least one is required/);
         });
-        it('should throw an exception if > 10 names were given', function() {
+        it('should throw an exception if > 10 names were given', function () {
             assert.throws(() => {
                 new Genderize().params([
-                    'James', 'Robert', 'John', 'Michael', 'David', 'William',
-                    'Richard', 'Thomas', 'Christopher', 'Daniel', 'Paul'
+                    'James',
+                    'Robert',
+                    'John',
+                    'Michael',
+                    'David',
+                    'William',
+                    'Richard',
+                    'Thomas',
+                    'Christopher',
+                    'Daniel',
+                    'Paul',
                 ]);
             }, /Too many names given: 11 names provided, but 10 is the maximum allowed/);
         });
         it('should add the apiKey if given', function () {
             assert.equal(
-                new Genderize('hello-world').params(['Max', 'Lisa'], 'DE').toString(),
-                'name[]=Max&name[]=Lisa&country_id=DE&apikey=hello-world'
+                new Genderize('hello-world')
+                    .params(['Max', 'Lisa'], 'DE')
+                    .toString(),
+                'name[]=Max&name[]=Lisa&country_id=DE&apikey=hello-world',
             );
         });
     });
@@ -39,21 +51,21 @@ describe('Genderize', function () {
             assert.strictEqual(new Genderize().limit, null);
         });
     });
-    describe('getIntHeader()', function() {
-        it('should work with string', function() {
+    describe('getIntHeader()', function () {
+        it('should work with string', function () {
             assert.strictEqual(Genderize.getIntHeader('123'), 123);
         });
-        it('should work with string[]', function() {
+        it('should work with string[]', function () {
             assert.strictEqual(Genderize.getIntHeader(['123', '456']), 123);
         });
-        it('should work with undefined', function() {
+        it('should work with undefined', function () {
             assert.strictEqual(Genderize.getIntHeader(undefined), undefined);
         });
     });
     describe('detect()', function () {
         this.timeout(10000);
 
-        it('should work with single names', async function() {
+        it('should work with single names', async function () {
             const g = new Genderize();
             const result = await g.predict('Max');
             assert.equal(result.name, 'Max');
@@ -67,7 +79,7 @@ describe('Genderize', function () {
             assert.ok(g.limit.remaining > 0, 'remaining > 0');
             assert.ok(g.limit.reset instanceof Date, 'reset is a Date');
         });
-        it('should work with multiple names', async function() {
+        it('should work with multiple names', async function () {
             const g = new Genderize();
             const result = await g.predict(['Moritz', 'Lisa']);
             assert.equal(result.length, 2);

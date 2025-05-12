@@ -6,15 +6,13 @@
 
 <br />
 
-`genderize` is a simple client for [genderize.io](https://genderize.io/), a gender prediction API using a person's 
-name. The library supports both normal and batch usage, allows free and paid usage via an optional API key, and makes it 
+`genderize` is a simple client for [genderize.io](https://genderize.io/), a gender prediction API using a person's
+name. The library supports both normal and batch usage, allows free and paid usage via an optional API key, and makes it
 very easy to access rate limiting information. It's written in TypeScript.
-
 
 ## 📦 Installation
 
-	npm install @sebbo2002/genderize
-
+    npm install @sebbo2002/genderize
 
 ## ⚡️ Quick Start
 
@@ -36,14 +34,12 @@ await genderize.predict('Alex', 'US');
 await genderize.predict(['Noah', 'Evelyn']);
 
 // { limit: 1000, remaining: 978, reset: 2022-05-23T00:00:02.203Z }
-genderize.limit
+genderize.limit;
 ```
-
 
 ## 📑 API-Reference
 
 Every hot detail about the API can be found in [the documentation](https://sebbo2002.github.io/genderize/develop/reference/).
-
 
 ## 🚦 Tests
 
@@ -51,7 +47,6 @@ Every hot detail about the API can be found in [the documentation](https://sebbo
 npm test
 npm run coverage
 ```
-
 
 ## 🙆🏼‍♂️ Copyright and license
 
