@@ -1,17 +1,47 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="310" lines-covered="306" line-rate="0.987" branches-valid="33" branches-covered="32" branch-rate="0.9695999999999999" timestamp="1751665154689" complexity="0" version="0.1">
+<coverage lines-valid="310" lines-covered="306" line-rate="0.987" branches-valid="43" branches-covered="40" branch-rate="0.9301999999999999" timestamp="1752517170971" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/genderize/genderize</source>
   </sources>
   <packages>
-    <package name="main" line-rate="0.987" branch-rate="0.9695999999999999">
+    <package name="main" line-rate="0.987" branch-rate="0.9301999999999999">
       <classes>
-        <class name="index.ts" filename="src/lib/index.ts" line-rate="0.987" branch-rate="0.9695999999999999">
+        <class name="index.ts" filename="src/lib/index.ts" line-rate="0.987" branch-rate="0.9301999999999999">
           <methods>
             <method name="__name" hits="1" signature="()V">
               <lines>
-                <line number="4" hits="1"/>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__export" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__copyProps" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="get" hits="14" signature="()V">
+              <lines>
+                <line number="1" hits="14"/>
+              </lines>
+            </method>
+            <method name="__toCommonJS" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="GenderizeGender" hits="3" signature="()V">
+              <lines>
+                <line number="1" hits="3"/>
+              </lines>
+            </method>
+            <method name="default" hits="11" signature="()V">
+              <lines>
+                <line number="1" hits="11"/>
               </lines>
             </method>
             <method name="&lt;instance_members_initializer&gt;" hits="8" signature="()V">
@@ -51,10 +81,10 @@
             </method>
           </methods>
           <lines>
-            <line number="1" hits="1" branch="false"/>
+            <line number="1" hits="11" branch="true" condition-coverage="90% (9/10)"/>
             <line number="2" hits="1" branch="false"/>
             <line number="3" hits="1" branch="false"/>
-            <line number="4" hits="1" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="4" hits="1" branch="true" condition-coverage="100% (1/1)"/>
             <line number="5" hits="1" branch="false"/>
             <line number="6" hits="1" branch="false"/>
             <line number="7" hits="1" branch="false"/>
@@ -360,7 +390,7 @@
             <line number="307" hits="2" branch="false"/>
             <line number="308" hits="2" branch="false"/>
             <line number="309" hits="2" branch="false"/>
-            <line number="310" hits="1" branch="false"/>
+            <line number="310" hits="1" branch="true" condition-coverage="0% (0/1)"/>
           </lines>
         </class>
       </classes>
