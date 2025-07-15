@@ -5,9 +5,9 @@
     "passes": 11,
     "pending": 0,
     "failures": 0,
-    "start": "2025-07-14T18:19:29.188Z",
-    "end": "2025-07-14T18:19:29.598Z",
-    "duration": 410,
+    "start": "2025-07-15T14:18:35.224Z",
+    "end": "2025-07-15T14:18:35.488Z",
+    "duration": 264,
     "testsRegistered": 11,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4752de9c-61b8-409d-9457-fdb36a59cd4b",
+      "uuid": "e35bdf32-2181-4b70-9dec-67510834a8b1",
       "title": "",
       "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
       "file": "/test/lib/index.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d2ccef9e-3da1-43be-81e9-eebbc248623a",
+          "uuid": "b06af3ca-cfdb-4bf5-acbd-daef8b197c31",
           "title": "Genderize",
           "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
           "file": "/test/lib/index.ts",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+              "uuid": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
               "title": "params()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "import_assert.default.equal(new import_lib.default().params([\"Max\",\"Lisa\"],\"DE\").toString(),\"name[]=Max&name[]=Lisa&country_id=DE\")",
                   "err": {},
-                  "uuid": "050164db-2bd1-4359-b934-4877137c211b",
-                  "parentUUID": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+                  "uuid": "39614182-68fe-4bb2-ba06-9f40840bd00e",
+                  "parentUUID": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,8 +74,8 @@
                   "context": null,
                   "code": "import_assert.default.equal(new import_lib.default().params(\"Max\").toString(),\"name=Max\")",
                   "err": {},
-                  "uuid": "fede3569-1738-421f-86f0-ecf297f813f9",
-                  "parentUUID": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+                  "uuid": "69d2f46d-b61d-46a5-9269-0787b13eb382",
+                  "parentUUID": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
                   "isHook": false,
                   "skipped": false
                 },
@@ -83,7 +83,7 @@
                   "title": "should throw an exception if no name was given",
                   "fullTitle": "Genderize params() should throw an exception if no name was given",
                   "timedOut": false,
-                  "duration": 1,
+                  "duration": 0,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -92,8 +92,8 @@
                   "context": null,
                   "code": "import_assert.default.throws(()=>{new import_lib.default().params([])},/No name given, but at least one is required/)",
                   "err": {},
-                  "uuid": "4d14ec67-8988-4d84-adbf-3c38ed469e78",
-                  "parentUUID": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+                  "uuid": "7ce3962d-2295-4828-bc58-91f26efc72b4",
+                  "parentUUID": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
                   "isHook": false,
                   "skipped": false
                 },
@@ -110,8 +110,8 @@
                   "context": null,
                   "code": "import_assert.default.throws(()=>{new import_lib.default().params([\"James\",\"Robert\",\"John\",\"Michael\",\"David\",\"William\",\"Richard\",\"Thomas\",\"Christopher\",\"Daniel\",\"Paul\"])},/Too many names given: 11 names provided, but 10 is the maximum allowed/)",
                   "err": {},
-                  "uuid": "d2141179-7f7c-401e-8967-eba8b9280084",
-                  "parentUUID": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+                  "uuid": "a5de629c-2eec-4a1b-b36e-840196595d00",
+                  "parentUUID": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
                   "isHook": false,
                   "skipped": false
                 },
@@ -128,30 +128,30 @@
                   "context": null,
                   "code": "import_assert.default.equal(new import_lib.default(\"hello-world\").params([\"Max\",\"Lisa\"],\"DE\").toString(),\"name[]=Max&name[]=Lisa&country_id=DE&apikey=hello-world\")",
                   "err": {},
-                  "uuid": "43688a37-637c-4367-9963-7b364b6168f5",
-                  "parentUUID": "4cfd097b-2e3a-47cf-a18b-18b933850119",
+                  "uuid": "23a0923f-53b4-4065-8378-9fbadb13bee0",
+                  "parentUUID": "0b71b5aa-b416-42fa-82b8-60b3ea9d3fa8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "050164db-2bd1-4359-b934-4877137c211b",
-                "fede3569-1738-421f-86f0-ecf297f813f9",
-                "4d14ec67-8988-4d84-adbf-3c38ed469e78",
-                "d2141179-7f7c-401e-8967-eba8b9280084",
-                "43688a37-637c-4367-9963-7b364b6168f5"
+                "39614182-68fe-4bb2-ba06-9f40840bd00e",
+                "69d2f46d-b61d-46a5-9269-0787b13eb382",
+                "7ce3962d-2295-4828-bc58-91f26efc72b4",
+                "a5de629c-2eec-4a1b-b36e-840196595d00",
+                "23a0923f-53b4-4065-8378-9fbadb13bee0"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 2,
+              "duration": 1,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "2210fbb1-fab1-4666-a8e9-74eeb1491d90",
+              "uuid": "d7f34f56-6d8f-40c2-9728-80dd8d3386fa",
               "title": "limit()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -171,15 +171,15 @@
                   "context": null,
                   "code": "import_assert.default.strictEqual(new import_lib.default().limit,null)",
                   "err": {},
-                  "uuid": "7b834510-e0c2-436c-8320-1d8f87378a7b",
-                  "parentUUID": "2210fbb1-fab1-4666-a8e9-74eeb1491d90",
+                  "uuid": "42454f9d-05e9-48e3-9c3e-f66fa11eb330",
+                  "parentUUID": "d7f34f56-6d8f-40c2-9728-80dd8d3386fa",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "7b834510-e0c2-436c-8320-1d8f87378a7b"
+                "42454f9d-05e9-48e3-9c3e-f66fa11eb330"
               ],
               "failures": [],
               "pending": [],
@@ -190,7 +190,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "245c2e75-31ad-4072-9062-20abc8bb422b",
+              "uuid": "29790f73-6b07-4c57-afb1-308dc97f4124",
               "title": "getIntHeader()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -210,8 +210,8 @@
                   "context": null,
                   "code": "import_assert.default.strictEqual(import_lib.default.getIntHeader(\"123\"),123)",
                   "err": {},
-                  "uuid": "ea1eb8b4-abc8-497c-857b-a74ba740fa99",
-                  "parentUUID": "245c2e75-31ad-4072-9062-20abc8bb422b",
+                  "uuid": "92c67c7a-7a49-41e4-a5cb-e69cd79bb98a",
+                  "parentUUID": "29790f73-6b07-4c57-afb1-308dc97f4124",
                   "isHook": false,
                   "skipped": false
                 },
@@ -228,8 +228,8 @@
                   "context": null,
                   "code": "import_assert.default.strictEqual(import_lib.default.getIntHeader([\"123\",\"456\"]),123)",
                   "err": {},
-                  "uuid": "8e3523d1-51ea-4dbe-8b86-b2c6a58f4ffe",
-                  "parentUUID": "245c2e75-31ad-4072-9062-20abc8bb422b",
+                  "uuid": "31214a3b-cfdd-4fef-9044-40a576485cc3",
+                  "parentUUID": "29790f73-6b07-4c57-afb1-308dc97f4124",
                   "isHook": false,
                   "skipped": false
                 },
@@ -246,17 +246,17 @@
                   "context": null,
                   "code": "import_assert.default.strictEqual(import_lib.default.getIntHeader(void 0),void 0)",
                   "err": {},
-                  "uuid": "7aaf9fbb-0f09-486a-893c-325a641b4554",
-                  "parentUUID": "245c2e75-31ad-4072-9062-20abc8bb422b",
+                  "uuid": "b5d937a4-e5d3-41e7-a296-2abf4db4054a",
+                  "parentUUID": "29790f73-6b07-4c57-afb1-308dc97f4124",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ea1eb8b4-abc8-497c-857b-a74ba740fa99",
-                "8e3523d1-51ea-4dbe-8b86-b2c6a58f4ffe",
-                "7aaf9fbb-0f09-486a-893c-325a641b4554"
+                "92c67c7a-7a49-41e4-a5cb-e69cd79bb98a",
+                "31214a3b-cfdd-4fef-9044-40a576485cc3",
+                "b5d937a4-e5d3-41e7-a296-2abf4db4054a"
               ],
               "failures": [],
               "pending": [],
@@ -267,7 +267,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "f239b657-482f-4104-9710-2499264a2666",
+              "uuid": "502d401b-2497-4ddc-8fff-b44d232f7e67",
               "title": "detect()",
               "fullFile": "/home/runner/work/genderize/genderize/test/lib/index.ts",
               "file": "/test/lib/index.ts",
@@ -278,7 +278,7 @@
                   "title": "should work with single names",
                   "fullTitle": "Genderize detect() should work with single names",
                   "timedOut": false,
-                  "duration": 368,
+                  "duration": 216,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -287,8 +287,8 @@
                   "context": null,
                   "code": "const g=new import_lib.default;const result=await g.predict(\"Max\");import_assert.default.equal(result.name,\"Max\");import_assert.default.equal(result.gender,\"male\");import_assert.default.equal(result.gender,import_lib.GenderizeGender.MALE);import_assert.default.ok(result.probability>.9,\"probability > 0.9\");import_assert.default.ok(result.count>1e4,\"count > 10000\");import_assert.default.ok(g.limit,\"limit is set\");import_assert.default.ok(g.limit.limit>0,\"limit > 0\");import_assert.default.ok(g.limit.remaining>0,\"remaining > 0\");import_assert.default.ok(g.limit.reset instanceof Date,\"reset is a Date\")",
                   "err": {},
-                  "uuid": "18c58cd8-2d00-4972-b73c-dc31256ac70e",
-                  "parentUUID": "f239b657-482f-4104-9710-2499264a2666",
+                  "uuid": "cf6a23de-eaec-4992-be3b-ea66cbc0b2e2",
+                  "parentUUID": "502d401b-2497-4ddc-8fff-b44d232f7e67",
                   "isHook": false,
                   "skipped": false
                 },
@@ -296,7 +296,7 @@
                   "title": "should work with multiple names",
                   "fullTitle": "Genderize detect() should work with multiple names",
                   "timedOut": false,
-                  "duration": 30,
+                  "duration": 34,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -305,21 +305,21 @@
                   "context": null,
                   "code": "const g=new import_lib.default;const result=await g.predict([\"Moritz\",\"Lisa\"]);import_assert.default.equal(result.length,2);import_assert.default.equal(result[0].name,\"Moritz\");import_assert.default.equal(result[0].gender,\"male\");import_assert.default.equal(result[0].gender,import_lib.GenderizeGender.MALE);import_assert.default.ok(result[0].probability>.9,\"probability > 0.9\");import_assert.default.ok(result[0].count>1e4,\"count > 10000\");import_assert.default.equal(result[1].name,\"Lisa\");import_assert.default.equal(result[1].gender,\"female\");import_assert.default.equal(result[1].gender,import_lib.GenderizeGender.FEMALE);import_assert.default.ok(result[1].probability>.9,\"probability > 0.9\");import_assert.default.ok(result[1].count>1e4,\"count > 10000\");import_assert.default.ok(g.limit,\"limit is set\");import_assert.default.ok(g.limit.limit>0,\"limit > 0\");import_assert.default.ok(g.limit.remaining>0,\"remaining > 0\");import_assert.default.ok(g.limit.reset instanceof Date,\"reset is a Date\")",
                   "err": {},
-                  "uuid": "74c0e586-cc70-4630-9956-c3f52649ceb1",
-                  "parentUUID": "f239b657-482f-4104-9710-2499264a2666",
+                  "uuid": "6d6c19cc-b164-4e6a-b06e-b4c10967ca4d",
+                  "parentUUID": "502d401b-2497-4ddc-8fff-b44d232f7e67",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "18c58cd8-2d00-4972-b73c-dc31256ac70e",
-                "74c0e586-cc70-4630-9956-c3f52649ceb1"
+                "cf6a23de-eaec-4992-be3b-ea66cbc0b2e2",
+                "6d6c19cc-b164-4e6a-b06e-b4c10967ca4d"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 398,
+              "duration": 250,
               "root": false,
               "rootEmpty": false,
               "_timeout": 10000
