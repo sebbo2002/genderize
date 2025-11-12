@@ -6,7 +6,6 @@
     "description": "genderize is a simple client for genderize.io, a gender prediction API",
     "devDependencies": {
         "@eslint/js": "^9.39.1",
-        "@qiwi/semantic-release-gh-pages-plugin": "^5.4.3",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/exec": "^7.1.0",
         "@semantic-release/git": "^10.0.1",
