@@ -27,11 +27,11 @@
         "semantic-release": "^25.0.3",
         "semantic-release-license": "^1.0.3",
         "source-map-support": "^0.5.21",
-        "tsdown": "^0.21.8",
+        "tsdown": "^0.21.9",
         "tsx": "^4.21.0",
         "typedoc": "^0.28.19",
-        "typescript": "^6.0.2",
-        "typescript-eslint": "^8.58.2"
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.60.0"
     },
     "engines": {
         "node": "20 || >=22.0.0"
@@ -45,8 +45,8 @@
     ],
     "homepage": "https://github.com/sebbo2002/genderize#readme",
     "license": "MIT",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
+    "main": "./dist/lib/index.cjs",
+    "module": "./dist/lib/index.mjs",
     "name": "@sebbo2002/genderize",
     "repository": {
         "type": "git",
@@ -58,6 +58,7 @@
         "coverage": "c8 mocha",
         "license-check": "license-checker --production --summary",
         "lint": "npx eslint . --fix && npx prettier . --write",
+        "prepare": "husky",
         "test": "mocha"
     },
     "type": "module",
