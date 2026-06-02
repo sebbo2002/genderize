@@ -286,7 +286,7 @@ export default class Genderize {
         | GenderizeResponseWithCountry
         | GenderizeResponseWithCountry[]
     > {
-        const queryString = new URLSearchParams(this.params(names, country));
+        const queryString = this.params(names, country);
         const response = await fetch(
             'https://api.genderize.io/?' + queryString,
             {
