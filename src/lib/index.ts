@@ -302,8 +302,7 @@ export default class Genderize {
         }
 
         const body = (await response.json()) as
-            | GenderizeResponse
-            | GenderizeResponse[];
+            GenderizeResponse | GenderizeResponse[];
         this.latestHeaders = [response.headers, new Date()];
         return body;
     }
