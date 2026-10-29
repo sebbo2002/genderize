@@ -1,3 +1,9 @@
+## [7.0.1](https://github.com/sebbo2002/genderize/compare/v7.0.0...v7.0.1) (2026-10-29)
+
+### Bug Fixes
+
+- **deps:** resolve dev dependency vulnerabilities ([c1d28da](https://github.com/sebbo2002/genderize/commit/c1d28da6ad8dc12f717764ced7beb7db0b8135b2))
+
 # [7.0.0](https://github.com/sebbo2002/genderize/compare/v6.0.0...v7.0.0) (2026-06-02)
 
 ### Features
