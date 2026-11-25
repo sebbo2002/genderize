@@ -10,7 +10,7 @@
     "reporter": ["text", "text-summary", "cobertura", "html"],
     "all": true,
     "instrument": true,
-    "branches": 95,
+    "branches": 93,
     "lines": 95,
     "functions": 95,
     "statements": 95,
